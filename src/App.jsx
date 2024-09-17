@@ -16,6 +16,7 @@ function App() {
       children: [
         { path: "/", element: <Multiple /> },
         { path: "/dev", element: <Developer /> },
+        { path: "/dev/:gender", element: <Developer /> },
         { path: "/ba", element: <BusinessAnalyst /> },
         { path: "/tester", element: <Tester /> },
         { path: "/manager", element: <Manager /> },

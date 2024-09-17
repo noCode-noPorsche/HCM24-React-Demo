@@ -2,9 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Profile from "../../components/profile-user";
 import "./index.scss";
+import { useParams } from "react-router-dom";
+import FilterGender from "../../components/filter-gender";
 
 function Developer() {
   const [devList, setDevList] = useState([]);
+  const { gender } = useParams(); // Lấy gender từ URL
+
   const fetchDevelopersList = async () => {
     try {
       const response = await axios.get(
@@ -14,16 +18,20 @@ function Developer() {
       const info = response.data.info;
       const combinedData = results.map((user) => ({ ...user, ...info }));
       setDevList(combinedData);
-      console.log(devList);
     } catch (error) {
       console.log(error);
     }
   };
+
   useEffect(() => {
     fetchDevelopersList();
   }, []);
+
+  const filterList = FilterGender(devList, gender);
+  console.log(filterList);
+
   return (
-    <div className="developer">{devList.map((user) => Profile(user))}</div>
+    <div className="developer">{filterList.map((user) => Profile(user))}</div>
   );
 }
 

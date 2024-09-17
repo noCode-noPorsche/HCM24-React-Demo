@@ -1,12 +1,17 @@
 import Sider from "../../pages/sider";
 import { Outlet } from "react-router-dom";
 import "./index.scss";
+import Header from "../header";
 
 function LayOut() {
   return (
     <div className="lay-out">
-      <Sider />
-      <Outlet />
+      <Header />
+
+      <div className="content">
+        <Sider />
+        <Outlet />
+      </div>
     </div>
   );
 }

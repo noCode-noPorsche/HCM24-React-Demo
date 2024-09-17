@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  button {
+    cursor: pointer;
+  }
+}
+
+.search {
+  input {
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+
+.option {
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
