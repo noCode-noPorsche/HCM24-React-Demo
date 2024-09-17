@@ -1,24 +1,22 @@
-.home {
-  background-color: rgb(87, 84, 84);
+.sider {
+  //   background-color: rgb(87, 84, 84);
   display: flex;
-  text-align: center;
-  justify-content: center;
+  //   text-align: center;
+  //   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  //   height: 100vh;
+  border: black solid 2px;
+  border-radius: 8px;
 
   button {
+    min-width: 150px;
+    max-width: 150px;
     cursor: pointer;
     margin: 10px 10px;
     padding: 10px 50px;
     border-radius: 8px;
     border: black solid 2px;
     background-color: rgb(219, 220, 216);
-
-    a {
-      text-decoration: none;
-      color: black;
-      font-size: 50px;
-    }
   }
   button:hover {
     background-color: rgb(91, 190, 93);

@@ -1,0 +1,13 @@
+.profile-user {
+  border: solid 1px black;
+  border-radius: 2px;
+  min-width: 206px;
+  text-align: center;
+  padding: 10px 10px;
+  img {
+    border-radius: 50%;
+  }
+  span {
+    font-weight: normal;
+  }
+}
